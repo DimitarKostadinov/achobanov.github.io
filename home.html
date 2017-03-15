@@ -11,15 +11,15 @@
 <body>
 	<header class="navbar navbar-fixed-top navbar-default">
     	<nav class="container">
-    		<div class="navbar-header">
+    		<section class="navbar-header">
     			<a href="./home.html" class="navbar-brand">FrontEndGAG</a>
     			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     				<span class="icon-bar"></span>
     			</button>
-    		</div>
-    		<nav class="navbar-collapse collapse" id="navbar-main">
+    		</section>
+    		<section class="navbar-collapse collapse" id="navbar-main">
     			<ul class="nav navbar-nav">
     				<li>
     					<a href="#">home</a>
@@ -42,14 +42,15 @@
     					<a href="#">?idea</a>
     				</li>
     			</ul>
-    		</div>
+    		</section>
     	</nav>
 	</header>
-	<div class="container" id="content-wrapper">
-	    <!--header-content-->
-	    <main class="row ">
+	<main id="content-wrapper">
+	    <section class="container">
+            <header>
+                <h1>lorem ipsum</h1>
+            </header>
 	        <div class="col-md-12">
-	        	<h1>lorem ipsum</h1>
 	            <div class="panel panel-default">
 	                <h2>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h2>
 	                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta luctus neque in venenatis. Maecenas id elit eleifend, lacinia nisl nec, lacinia tellus. Nulla in varius dolor, sed gravida tortor. Pellentesque at ultricies lacus, sit amet rutrum mi. Proin at dolor ut lacus mollis posuere quis nec massa. Aenean bibendum, nisl ut imperdiet tincidunt, odio sapien eleifend erat, at porttitor nulla mi quis arcu. Quisque magna mi, aliquam a sodales dignissim, mollis eu ligula. Maecenas viverra lorem lacus, in ultricies arcu tincidunt iaculis. Praesent tempus sapien vel fermentum pretium. Nam scelerisque elit nec vehicula commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
@@ -57,15 +58,15 @@
 	                <p>Donec et tempor dui, eu aliquet eros. Nam posuere lobortis neque facilisis egestas. Mauris in odio eu augue auctor fringilla in sed nunc. Mauris venenatis sit amet dui vel scelerisque. Vivamus id diam ultrices, placerat metus non, consequat massa. Nam quam felis, elementum sit amet semper id, sagittis sed purus. Donec ultricies ex eu mattis vulputate. Praesent posuere velit ac nibh aliquet hendrerit aliquet sed metus. Donec diam quam, porta sit amet nulla ac, tempor dignissim mauris. In et lacus vehicula, egestas nisl nec, volutpat lectus. Sed suscipit leo vel tempus pulvinar. Sed tempor, velit a pellentesque tristique, neque lacus fringilla leo, in maximus purus enim non risus. Suspendisse dignissim velit laoreet ornare rhoncus. Morbi auctor, purus eget aliquam hendrerit, mauris turpis porttitor neque, nec volutpat nisi risus sed est. Vestibulum vitae ligula scelerisque dui sodales pretium.</p>
 	            </div>
 	        </div>
-	    </main>
-	</div>
+	    </section>
+        <section id="threshold">
+            <span id="team">team: <em>raxus prime</em></span>
+            <span id="course">web-fundamentals@SoftUni</span>
+        </section>
+	</main>
     <footer id="footer">
-    	<header>
-			<span id="team">team: <em>raxus prime</em></span>
-			<span id="course">web-fundamentals@SoftUni</span>
-    	</header>
-    	<div id="background-pattern">
-	    	<section id="background-pattern">
+    	<section id="background-pattern">
+	    	<section>
 				<div class="team-member">
 					<a href="https://www.facebook.com/alex.chobanov"><img src="./resources/images/alex-chobanov-round.png"></a>
 					<h3>alex chobanov</h3>	
@@ -75,11 +76,11 @@
 					<h3>mitko kostadinov</h3>
 				</div>
 	    	</section>
-		<footer>
-			<span>Teamwork project</span>
-			<span id="theme-by">Site theme by: <a href="https://bootswatch.com">Bootswatch</a></span> 
-		</footer>
-    	</div>
+			<footer>
+				<span>Teamwork project</span>
+				<span id="theme-by">Site theme by: <a href="https://bootswatch.com">Bootswatch</a></span>
+			</footer>
+    	</section>
     </footer>
 
 <script

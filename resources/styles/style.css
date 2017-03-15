@@ -4,11 +4,26 @@ h1,
 em {
 	text-transform: capitalize;
 }
-div#content-wrapper {
-	margin-top:60px;	
+header.navbar {
+    box-shadow: 0 0 20px black;
+}
+.navbar-header > .navbar-brand {
+    color: #0ce3ac;
+    cursor: initial;
+}
+.navbar-header > .navbar-brand:hover {
+    color: #0ce3ac;
+    cursor: initial;
+}
+main#content-wrapper {
+	margin-top:60px;
+    position:relative;
+    z-index:2;
+    background-color: #222222;
+    margin-bottom: 370px;
 }
 h1 {
-    font-family: DauphinPlain;
+    font-family: DauphinPlain, serif;
     text-align: center;
     text-shadow: 1px 2px 1px black;
     font-weight: 600;
@@ -23,69 +38,85 @@ h2 {
 div.panel-default {
 	padding: 15px 30px 30px 30px;
 }
-div#content-wrapper div.panel-default p {
+#content-wrapper div.panel-default p {
 	font-size:20px;
 	text-indent: 30px;
 	text-align: justify;
 }
-div#content-wrapper div.panel-default p:first-of-type::first-letter {
-	font-family: DauphinPlain;
+#content-wrapper div.panel-default p:first-of-type::first-letter {
+	font-family: DauphinPlain, serif;
 	font-weight:400;
 	font-size:30px;
 }
-#footer span {
-    font-size: 20px;	
-    color:gray;
+#threshold  em {
+    color: #0ce3ac;
+    font-size:25px;
+    font-family: 'Audiowide', cursive;
 }
-#footer em {
-	color: #0ce3ac;
-	font-size:25px;
-	font-family: 'Audiowide', cursive;
-}
-#footer > header {
+#threshold  {
     padding-left: 14px;
     padding-right: 15px;
     padding-bottom: 10px;
     box-shadow: 0 10px 8px #121212;
     z-index: 2;
     position: relative;
-/*    border-bottom: 1px solid;*/
 }
-	#footer > header span#course {
-		float:right;
-		color: #0ce3ac;
-	}
-#footer > #background-pattern {
-	background-image:url(../../resources/images/ep_naturalblack.png);
+#threshold span#course {
+    float:right;
+    color: #0ce3ac;
 }
-#footer section {
-    z-index: 1;
-    position: relative;
-	border-top:1px solid transparent;
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-	padding-top:20px;
-	text-align: center;
+#footer {
+    position: fixed;
+    bottom:0;
+    z-index:1;
+    width:100%;
 }
-	#footer section > .team-member {
-		display: inline-block;
-		margin:20px;
-	}
-	#footer section > .team-member img {
-	    border: 2px solid #ffffff;
-	    box-shadow: 0 0 5px #000000;
-	    -webkit-box-shadow: 0 0 5px #000000;
-	    border-radius: 50%;
-	    transition: 0.3s all ease-in-out;
-	    height: 200px;
-	}
-	#footer section > .team-member h3 {
-		text-transform: capitalize;
-		color:gray;
-	}
-#footer footer {
-	text-align:center;
-}
-	#footer footer > #theme-by {
-		float:right;
-	}
+    #footer span {
+    font-size: 20px;
+    color:gray;
+    }
+    #footer > #background-pattern {
+        background-image:url(../../resources/images/ep_naturalblack.png);
+        height:370px;
+    }
+    #footer section {
+        z-index: 1;
+        position: relative;
+        border-top:1px solid transparent;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+        padding-top:20px;
+        text-align: center;
+    }
+        #footer section > .team-member {
+            display: inline-block;
+            margin:20px;
+            width:250px;
+        }
+            #footer section > .team-member img {
+                border: 2px solid #ffffff;
+                box-shadow: 0 0 50px #000000;
+                -webkit-box-shadow: 0 0 50px #000000;
+                border-radius: 50%;
+                transition: 0.1s all ease-in-out;
+                height: 200px;
+            }
+            #footer section > .team-member img:hover {
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                border-color: #0ce3ac;
+                height:230px;
+            }
+            #footer section > .team-member h3 {
+                text-transform: capitalize;
+                color:gray;
+                position: relative;
+                bottom:0;
+            }
+    #footer footer {
+        text-align:center;
+    }
+        #footer footer > #theme-by {
+            float:right;
+        }
