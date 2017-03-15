@@ -19,6 +19,9 @@ body {
     font-size: 50px;
     font-family: 'Passion One', cursive;
 }
+div.panel-default {
+    padding: 15px 0px 10px 0px;}
+
 
 .panel-image img.panel-image-preview {
     width: 80%;
@@ -109,7 +112,46 @@ div#content-wrapper div.panel-default p {
 .fa{
     font-size: 20px;
 }
+img.panel-image-preview:hover {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.category-button{
+    text-align: center;
+    padding: 20px;
+    background: #faa2e6;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.category-button a{
+    color: red;
+}
 
+.view-more{
+    text-align: center;
+
+}
+
+/*==========  Smaller Pictures  ==========*/
+/*h1 {*/
+    /*font-family: DauphinPlain;*/
+    /*text-align: center;*/
+    /*text-shadow: 1px 2px 1px black;*/
+    /*font-weight: 600;*/
+    /*word-wrap: break-word;*/
+    /*width: 80%;*/
+/*}*/
+
+/*<div class=" col-md-7 col-md-offset-3 col-sm-12">*/
+/*{*/
+
+/*}*/
+/*</div>*/
+  /*div.panel-default {*/
+      /*padding: 15px 30px 30px 30px;*/
+      /*width: 80%;*/
+  /*}*/
 
 /*==========  Mobile First Method  ==========*/
 
