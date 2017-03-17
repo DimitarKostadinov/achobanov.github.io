@@ -48,11 +48,6 @@ div.panel-default {
 	font-weight:400;
 	font-size:30px;
 }
-#threshold  em {
-    color: #0ce3ac;
-    font-size:25px;
-    font-family: 'Audiowide', cursive;
-}
 #threshold  {
     padding-left: 14px;
     padding-right: 15px;
@@ -60,11 +55,28 @@ div.panel-default {
     box-shadow: 0 10px 8px #121212;
     z-index: 2;
     position: relative;
+    height: 35px;
 }
-#threshold span#course {
-    float:right;
-    color: #0ce3ac;
-}
+    #threshold > span {
+        font-size:20px;
+    }
+    #threshold span#course {
+        float:right;
+        color: #0ce3ac;
+    }
+    #threshold span#project-by {
+        float:left;
+    }
+    #threshold span#team {
+        float:left;
+        margin-top:40px;
+        margin-left: -90px;
+        color: #0ce3ac;
+        font-size:28px;
+        font-family: 'Audiowide', cursive;
+        text-transform: capitalize;
+        font-style:italic;
+    }
 #footer {
     position: fixed;
     bottom:0;
@@ -76,8 +88,17 @@ div.panel-default {
     color:gray;
     }
     #footer > #background-pattern {
-        background-image:url(../../resources/images/ep_naturalblack.png);
-        height:370px;
+        background-image: url(../../resources/images/ep_naturalblack.png);
+        height: 370px;
+    }
+    #team,
+    #footer #project-by,
+    #footer #theme-by,
+    #footer a,
+    #footer li,
+    #footer h3 {
+        font-family: 'Audiowide', cursive;
+        color: gray;
     }
     #footer section {
         z-index: 1;
@@ -92,31 +113,56 @@ div.panel-default {
             display: inline-block;
             margin:20px;
             width:250px;
+            vertical-align: top;
         }
             #footer section > .team-member img {
                 border: 2px solid #ffffff;
-                box-shadow: 0 0 50px #000000;
-                -webkit-box-shadow: 0 0 50px #000000;
+                box-shadow: 0 0 5px #000000;
+                -webkit-box-shadow: 0 0 5px #000000;
                 border-radius: 50%;
                 transition: 0.1s all ease-in-out;
-                height: 200px;
+                height: 170px;
             }
-            #footer section > .team-member img:hover {
-                -webkit-box-shadow: none;
-                -moz-box-shadow: none;
-                box-shadow: none;
+            #footer section > .team-member:hover img {
                 border-color: #0ce3ac;
-                height:230px;
+                /*height:200px;*/
+                /*margin-top:-30px;*/
+                transform: scale(1.2);
+                -webkit-box-shadow: 0 0 50px #000000;
+                -moz-box-shadow: 0 0 50px #000000;
+                box-shadow: 0 0 50px #000000;
             }
             #footer section > .team-member h3 {
                 text-transform: capitalize;
-                color:gray;
+                font-size:20px;
                 position: relative;
                 bottom:0;
+                color:#0ce3ac;
+            }
+            #footer section > .team-member .contact-info {
+                padding:0;
+                list-style:none;
             }
     #footer footer {
-        text-align:center;
+        position: absolute;
+        bottom:10px;
+        right:20px;
+        z-index:2;
     }
         #footer footer > #theme-by {
-            float:right;
+            font-size:16px;
+            font-family: 'Audiowide', cursive;
         }
+        #footer footer > #theme-by a {
+            font-size:18px;
+            color: #375a7f;
+        }
+
+@media screen and (max-width: 599px) {
+    #footer > #background-pattern {
+        height: 700px;
+    }
+    main#content-wrapper {
+        margin-bottom:700px;
+    }
+}
