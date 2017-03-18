@@ -88,10 +88,10 @@ div.panel-default {
     color:gray;
     }
     #footer > #background-pattern {
-        background-image: url(../../resources/images/ep_naturalblack.png);
+        background-image: url(../../resources/images/pattern/footer-pattern.png);
         height: 370px;
     }
-    #team,
+    #threshold #team,
     #footer #project-by,
     #footer #theme-by,
     #footer a,
