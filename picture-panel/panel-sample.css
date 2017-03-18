@@ -36,12 +36,23 @@ body {
 div.panel-default {
     padding: 15px 0px 10px 0px;}
 
-
+div.panel-default.home-height {
+    padding: 0px 0px 10px 0px;
+}
 
 
 .panel-image img.panel-image-preview {
     width: 90%;
     border-radius: 4px 4px 0px 0px;
+}
+
+/*home page*/
+.panel-image img.panel-image-preview.home-width {
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+}
+div.panel-default.home-height {
+    padding: 0px 0px 10px 0px;
 }
 
 .panel-heading ~ .panel-image img.panel-image-preview {
@@ -133,20 +144,13 @@ img.panel-image-preview:hover {
     /*<----added transition and re-scaling picture on hover---->*/
     transition: all 0.5s ease-in-out;
     transform: scale(1.4);
-    /*width: 130%;*/
-    /*margin: 0 -50px;*/
 }
-/*.button{*/
-    /*text-align: center;*/
-    /*padding: 20px;*/
-    /*background: grey;*/
-    /*width: 60%;*/
-    /*margin: 0 auto;*/
-    /*border-radius: 20px;*/
-/*}*/
-/*.category-button a{*/
-    /*color: red;*/
-/*}*/
+img.home:hover{
+    transform: scale(1.0);
+}
+
+
+
 
 
 
@@ -154,6 +158,11 @@ img.panel-image-preview:hover {
 .view-more{
     text-align: center;
 
+}
+.view-more a:hover{
+    -webkit-box-shadow: 10px 6px 66px 10px rgba(101,226,235,0.68);
+    -moz-box-shadow: 10px 6px 66px 10px rgba(101,226,235,0.68);
+    box-shadow: 10px 6px 66px 10px rgba(101,226,235,0.68);
 }
 [class^="hvr-"] {
     margin: .4em;
@@ -176,7 +185,7 @@ a:hover + .thanks{
     color: red;
 }
 .thanks{
-    display: block;
+    display: none;
     font-family: 'Shrikhand', cursive;
     color: transparent;
     font-size: 20px;
@@ -185,7 +194,13 @@ a:hover + .thanks{
 
 }
 
-/* Icon Wobble Horizontal1 */
+a:hover, a:focus {
+    color: red;
+    text-decoration: none;
+}
+
+                /*LOVE BUTTON*/
+
 @-webkit-keyframes hvr-icon-wobble-horizontal1 {
     16.65% {
         -webkit-transform: translateX(6px);
@@ -271,6 +286,93 @@ a:hover + .thanks{
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
+                /*VIEW MORE BUTTON*/
+
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+.hvr-icon-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    padding-right: 2.5em;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.hvr-icon-wobble-horizontal:before {
+    content: "\f061";
+    position: absolute;
+    color: #0ce3ac;;
+    right: 0.2em;
+    bottom: 7px;
+    padding: 0px 5px;
+    font-family: FontAwesome;
+    font-size: 25px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.hvr-icon-wobble-horizontal:hover:before, .hvr-icon-wobble-horizontal:focus:before, .hvr-icon-wobble-horizontal:active:before {
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
 
 
 
@@ -278,48 +380,28 @@ a:hover + .thanks{
 
 
 
-/*==========  Smaller Pictures  ==========*/
-/*h1 {*/
-    /*font-family: DauphinPlain;*/
-    /*text-align: center;*/
-    /*text-shadow: 1px 2px 1px black;*/
-    /*font-weight: 600;*/
-    /*word-wrap: break-word;*/
-    /*width: 80%;*/
+/*!*==========  Mobile First Method  ==========*!*/
+
+/*!* Custom, iPhone Retina *!*/
+/*@media only screen and (max-width : 320px) {*/
+    /*.level-line-up {*/
+        /*position: relative;*/
+        /*top: -4px;*/
+    /*}*/
 /*}*/
 
-/*<div class=" col-md-7 col-md-offset-3 col-sm-12">*/
-/*{*/
-
+/*!* Extra Small Devices, Phones *!*/
+/*@media only screen and (max-width : 480px) {*/
+    /*.level-line-up {*/
+        /*position: relative;*/
+        /*top: -4px;*/
+    /*}*/
 /*}*/
-/*</div>*/
-  /*div.panel-default {*/
-      /*padding: 15px 30px 30px 30px;*/
-      /*width: 80%;*/
-  /*}*/
 
-/*==========  Mobile First Method  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-    .level-line-up {
-        position: relative;
-        top: -4px;
-    }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-    .level-line-up {
-        position: relative;
-        top: -4px;
-    }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 480px) and (max-width : 768px) {
-    .level-line-up {
-        position: relative;
-        top: -4px;
-    }
-}
+/*!* Small Devices, Tablets *!*/
+/*@media only screen and (min-width : 480px) and (max-width : 768px) {*/
+    /*.level-line-up {*/
+        /*position: relative;*/
+        /*top: -4px;*/
+    /*}*/
+/*}*/
