@@ -57,6 +57,7 @@ div.panel-default.home-height {
 
 .panel-heading ~ .panel-image img.panel-image-preview {
     border-radius: 30px;
+    max-height: 360px;
 }
 
 .panel-heading .list-inline {
@@ -140,14 +141,15 @@ blockquote {
 .fa{
     font-size: 20px;
 }
-div.panel-default:hover img{
-    transform: scale(1.2);
+.panel-image:hover img{
+    transform: scale(1.1);
     transition: transform 1.2s ease;
-    -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
     -webkit-box-shadow: -1px 2px 36px 10px rgba(116,109,168,1);
     -moz-box-shadow: -1px 2px 36px 10px rgba(116,109,168,1);
     box-shadow: -1px 2px 36px 10px rgba(116,109,168,1);
 }
+
 img.panel-image-preview{
     -webkit-transition: 2s ease-in-out;
     -moz-transition: 2s ease-in-out;
@@ -155,7 +157,7 @@ img.panel-image-preview{
     transition: 1.5s ease-in-out;
 }
 img.home:hover{
-    transform: scale(1.0);
+    transform: scale(1.1);
 }
 
 .view-more{
