@@ -28,7 +28,7 @@ body {
 }
 .panel-default>.panel-heading h2 {
     margin:10px;
-    font-size: 50px;
+    font-size: 35px;
     font-family: 'Passion One', cursive;
     color: lightskyblue;
     word-wrap: break-word;
@@ -42,7 +42,7 @@ div.panel-default.home-height {
 
 
 .panel-image img.panel-image-preview {
-    width: 90%;
+    width: 70%;
     border-radius: 4px 4px 0px 0px;
 }
 
@@ -140,20 +140,22 @@ blockquote {
 .fa{
     font-size: 20px;
 }
-img.panel-image-preview:hover {
-    /*<----added transition and re-scaling picture on hover---->*/
-    transition: all 0.5s ease-in-out;
-    transform: scale(1.4);
+div.panel-default:hover img{
+    transform: scale(1.2);
+    transition: transform 1.2s ease;
+    -webkit-box-shadow: -1px 2px 36px 10px rgba(116,109,168,1);
+    -moz-box-shadow: -1px 2px 36px 10px rgba(116,109,168,1);
+    box-shadow: -1px 2px 36px 10px rgba(116,109,168,1);
+}
+img.panel-image-preview{
+    -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+    transition: 1.5s ease-in-out;
 }
 img.home:hover{
     transform: scale(1.0);
 }
-
-
-
-
-
-
 
 .view-more{
     text-align: center;
@@ -373,7 +375,11 @@ a:hover, a:focus {
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
-
+@media only screen and (max-width: 599px){
+    .panel-image img.panel-image-preview {
+        width: 100%;
+    }
+}
 
 
 
