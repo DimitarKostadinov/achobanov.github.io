@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
+body {
+    font-size:18px;
+    color: #eee;
+}
 header ul.nav a,
 h1,
 em {
@@ -16,7 +20,7 @@ header.navbar {
     cursor: initial;
 }
 main#content-wrapper {
-	margin-top:60px;
+	margin-top:80px;
     position:relative;
     z-index:2;
     background-color: #222222;
@@ -25,12 +29,19 @@ main#content-wrapper {
 h1 {
     font-family: DauphinPlain, serif;
     text-align: center;
-    text-shadow: 1px 2px 1px black;
-    font-weight: 600;
+    text-shadow: 2px 2px 5px black;
 }
 h2 {
+    text-align: center;
+    color: #375a7f;
+    font-style: italic;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+h4 {
 	font-style: italic;
-	margin-bottom:50px;
+	margin-bottom:30px;
 	font-size:17px;
 	color:gray;
 	text-align: center;
@@ -38,16 +49,36 @@ h2 {
 div.panel-default {
 	padding: 15px 30px 30px 30px;
 }
-#content-wrapper div.panel-default p {
-	font-size:20px;
-	text-indent: 30px;
-	text-align: justify;
-}
-#content-wrapper div.panel-default p:first-of-type::first-letter {
-	font-family: DauphinPlain, serif;
-	font-weight:400;
-	font-size:30px;
-}
+    .panel-default ol{
+        list-style:none;
+    }
+    .panel-default #code-languages {
+        margin:10px 0 10px 10%;
+        padding:0;
+    }
+        .panel-default li {
+            margin: 5px 0;
+            color:gray;
+        }
+        .panel-default p {
+            font-style: italic;
+            margin-bottom: 30px;
+            text-align: left;
+            color:gray;
+            font-size:20px;
+            text-indent: 30px;
+        }
+        .panel-default p:first-of-type::first-letter {
+            font-family: DauphinPlain, serif;
+            font-weight:400;
+            font-size:30px;
+        }
+    .panel-default .code {
+        font-family: 'Audiowide', cursive;
+        font-size: 1.2em;
+        color: #0ce3ac;
+        margin:0 5px;
+    }
 #threshold  {
     padding-left: 14px;
     padding-right: 15px;
