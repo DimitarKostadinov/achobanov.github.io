@@ -27,7 +27,7 @@ main#content-wrapper {
     margin-bottom: 370px;
 }
 h1 {
-    font-family: DauphinPlain, serif;
+    font-family: 'Audiowide', serif;
     text-align: center;
     text-shadow: 2px 2px 5px black;
 }
@@ -36,7 +36,7 @@ h2 {
     color: #375a7f;
     font-style: italic;
     text-shadow: 2px 2px 5px black;
-    margin-bottom: 20px;
+    margin: 40px 0;
     font-weight: 600;
 }
 h4 {
@@ -56,6 +56,9 @@ div.panel-default {
         margin:10px 0 10px 10%;
         padding:0;
     }
+        .panel-default label {
+            text-decoration: underline;
+        }
         .panel-default li {
             margin: 5px 0;
             color:gray;
@@ -68,17 +71,40 @@ div.panel-default {
             font-size:20px;
             text-indent: 30px;
         }
-        .panel-default p:first-of-type::first-letter {
+        .panel-default a {
+            display: block;
+            text-align:center;
+        }
+        .panel-default img {
+            display: inline-block;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            box-shadow: 0 0 10px darkgrey;
+            max-width:100%;
+        }
+        .panel-default .home-funny {
+            margin-top: 30px;
+            text-align: center;
+        }
+            .panel-default .home-funny h3 {
+                color:gray;
+                font-style:italic;
+                text-align: left;
+            }
+        .panel-default h3:first-of-type::first-letter {
             font-family: DauphinPlain, serif;
             font-weight:400;
-            font-size:30px;
+            font-size:35px;
+            text-transform: capitalize;
+            color:#0ce3ac;
         }
-    .panel-default .code {
+        .panel-default .code {
         font-family: 'Audiowide', cursive;
         font-size: 1.2em;
         color: #0ce3ac;
         margin:0 5px;
     }
+/* 4. Threshold, stay at content bottom */
 #threshold  {
     padding-left: 14px;
     padding-right: 15px;
@@ -94,6 +120,7 @@ div.panel-default {
     #threshold span#course {
         float:right;
         color: #0ce3ac;
+        margin-left:-100%;
     }
     #threshold span#project-by {
         float:left;
@@ -108,6 +135,7 @@ div.panel-default {
         text-transform: capitalize;
         font-style:italic;
     }
+/* 1. Footer position, @media */
 #footer {
     position: fixed;
     bottom:0;
@@ -115,8 +143,8 @@ div.panel-default {
     width:100%;
 }
     #footer span {
-    font-size: 20px;
-    color:gray;
+        font-size: 20px;
+        color:gray;
     }
     #footer > #background-pattern {
         background-image: url(../../resources/images/pattern/footer-pattern.png);
@@ -131,6 +159,7 @@ div.panel-default {
         font-family: 'Audiowide', cursive;
         color: gray;
     }
+    /* 2. Z-index, alignment */
     #footer section {
         z-index: 1;
         position: relative;
@@ -174,6 +203,10 @@ div.panel-default {
                 padding:0;
                 list-style:none;
             }
+            #footer section > .team-member .contact-info .e-mail {
+                font-size:16px;
+            }
+    /* 3. Footer, position */
     #footer footer {
         position: absolute;
         bottom:10px;
@@ -195,5 +228,19 @@ div.panel-default {
     }
     main#content-wrapper {
         margin-bottom:700px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .panel-default .home-funny:nth-of-type(even) h3{
+        float:left;
+        margin-top:150px;
+    }
+    .panel-default .home-funny h3,
+    .panel-default .home-funny img {
+        display: inline-block;
+        width:45%
+    }
+    .panel-default .home-funny img {
+        margin:20px;
     }
 }
