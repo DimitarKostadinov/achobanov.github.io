@@ -32,6 +32,7 @@ body {
     font-family: 'Passion One', cursive;
     color: lightskyblue;
     word-wrap: break-word;
+    text-shadow: 16px 5px 25px rgba(39, 101, 200, 1)
 }
 div.panel-default {
     padding: 0px 0px 10px 0px;}
